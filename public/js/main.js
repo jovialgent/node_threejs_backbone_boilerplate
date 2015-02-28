@@ -4,7 +4,13 @@ require.config({
     paths: {
         jquery: 'libs/jquery/jquery-2.1.1',
         underscore: 'libs/underscore/underscore',
-        backbone: 'libs/backbone/backbone'
+        backbone: 'libs/backbone/backbone',
+        threejs : 'libs/threejs/three',
+        detector : 'libs/threejs/example/Detector'
+    },
+
+    shim : {
+    	'libs/threejs/example/Detector' : ['threejs'] 
     }
 
 });

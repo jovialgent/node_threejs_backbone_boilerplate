@@ -2,14 +2,16 @@
 
 define([
     // These are path alias that we configured in our bootstrap
-    'jquery',     // lib/jquery/jquery
-    'underscore', // lib/underscore/underscore
+    'jquery',     
+    'underscore', 
     'backbone',
-    'router'// lib/backbone/backbone
-], function($, _, Backbone, Router){
+    'router', 
+
+    'views/threejsViz/boilerplate'
+], function($, _, Backbone, Router, ThreeJsVis){
     
     var initialize = function(){
-       alert("App was initialized");
+       ThreeJsVis.initialization();
     }
     
     // Above we have passed in jQuery, Underscore and Backbone
