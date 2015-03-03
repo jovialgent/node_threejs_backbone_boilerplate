@@ -1,24 +1,30 @@
-//Filename: boilerplate.js
+/**
+ * Runs this application using the initialization method.
+ * 
+ * @module app
+ * @author George Petersen
+ */
 
 define([
-    // These are path alias that we configured in our bootstrap
-    'jquery',     
-    'underscore', 
-    'backbone',
-    'router', 
-
-    'views/threejsViz/boilerplate'
-], function($, _, Backbone, Router, ThreeJsVis){
+    //Add File Paths to different visualizations
+    'visualizations/THREEjs/spinCube'
+], function(
+    SpinCube //Reference to this Boilerplate Module
+    ){
     
+    /*
+     * This initialize method runs all THREEjs visualizations
+     *
+     * @method initialize
+     */
     var initialize = function(){
-       ThreeJsVis.initialization();
+       SpinCube.initialization(); //Runs Boilerplate THREEjs Visualization
     }
-    
-    // Above we have passed in jQuery, Underscore and Backbone
-    // They will not be accessible in the global scope
+
+    //Returns this initialize method for other modules to initilize app
     return {
         initialize:initialize
         
     };
-    // What we return here will be used by other modules
+    
 });
